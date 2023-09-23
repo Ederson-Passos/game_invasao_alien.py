@@ -1,4 +1,7 @@
 import pygame.font
+from pygame.sprite import Group
+
+from nave import Nave
 
 
 class Placar:
@@ -18,6 +21,7 @@ class Placar:
         self.prepara_score()
         self.prepara_pontuacao_maxima()
         self.prepara_nivel()
+        self.prepara_naves()
 
     def prepara_score(self):
         """Transforma a pontuação em uma imagem renderizada."""
@@ -57,3 +61,7 @@ class Placar:
         self.nivel_rect = self.nivel_imagem.get_rect()
         self.nivel_rect.right = self.pontuacao_rect.right
         self.nivel_rect.top = self.pontuacao_rect.bottom + 10
+
+    def prepara_naves(self):
+        """Mostra quantas espaçonaves restam."""
+        pass

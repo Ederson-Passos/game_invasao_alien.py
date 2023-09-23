@@ -1,10 +1,13 @@
 import pygame
+from pygame.sprite import Sprite
 
 
-class Nave:
+# A classe Nave herda de Sprite
+class Nave(Sprite):
 
     def __init__(self, configuracoes, tela):
         """Inicializa a espaçonave e define sua posição inicial."""
+        super(Nave, self).__init__()
         self.tela = tela
         self.configuracoes = configuracoes  # Recebendo acesso às configurações de velocidade
 
