@@ -1,7 +1,7 @@
 # Explorando a Arte da Programação com Python: Desenvolvendo um Jogo
 
 ![Badge em desenvolvimento](https://img.shields.io/badge/Status-Em%20desenvolvimento-dark) ![Badge linguagem Python](https://img.shields.io/badge/linguagem-Python-orange
-)
+) ![Habilidade POO](https://img.shields.io/badge/habilidade-POO-blue) ![Biblioteca Pygame](https://img.shields.io/badge/biblioteca-Pygame-8A2BE2)
 
 # Índice
 * [Introdução](#introdução)
