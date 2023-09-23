@@ -1,1 +1,0 @@
-print("Este é um código de teste.")
