@@ -11,8 +11,6 @@
 * [Conclusão](#conclusão)
 * [Referências bibliográficas](#referências-bibliográficas)
 
-# Desfazendo as modificações
-
 # Introdução
 Compartilho com você um projeto que visa mergulhar no mundo da programação enquanto nos divertimos com a criação de um jogo em Python usando a biblioteca Pygame. Meu nome é Éderson Passos, sou professor de Matemática e estudante de Ciência da Computação. Meu interesse pela interseção entre raciocínio, design, criatividade e arte me levou a embarcar nessa jornada, e estou empolgado em compartilhar com vocês os detalhes deste projeto e o que aprendi ao longo de sua elaboração.
 
