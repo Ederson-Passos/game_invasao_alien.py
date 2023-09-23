@@ -25,7 +25,7 @@ Consiste em um jogo de tiros em 2D (duas dimensões, estilo arcade), composto po
 # Etapas do projeto
 1. `Aprendizado dos fundamentos da linguagem Python:` diferentes tipos de dados; armazenamento através de variáveis, listas, dicionários e tuplas; utilização de laços de repetição e os condicionais if, elif e else; tratamento de inputs do usuário; criação de funções para reutilização e organização do código (funções locais e funções lambda); documentação e depuração (refatoração) do código; tratatamento de erros; criação de testes simples; consulta e utilização da documentação da linguagem.
 
-(incluir imagem dos livros)
+![Imagens dos livros utilizados para estudo.](https://github.com/Ederson-Passos/game_invasao_alien.py/assets/145729066/d8b63a17-7e48-4da6-952a-2b16bfb2cf35)
 
 2. `Configuração inicial:` preparação do ambiente de desenvolvimento com Python e Pygame, configuração da janela do jogo e loop principal, criação dos módulos principais: "Configurações" e "Funções do jogo", com a criação de suas respectivas funções locais `__init__(self)`.
 
@@ -37,7 +37,7 @@ Consiste em um jogo de tiros em 2D (duas dimensões, estilo arcade), composto po
 
 4. `Lógica do jogo:` desenvolvimento de funções para gerenciamento do movimento dos personagens, - tanto da nave quanto da frota de alienígenas -, implementação de funções para detecção de colisões, contagem de pontos, recordes e níveis, com consequente aumento no grau de dificuldade.
 
-(incluir um gif do jogo no estado atual)
+![Animação do jogo em desenvolvimento.](https://github.com/Ederson-Passos/game_invasao_alien.py/assets/145729066/07362b7c-c7d0-44b1-96ab-bd556ffd5649)
 
 5. `Estilo e design:` utilizamos para os personagens imagens de livre uso da internet, realizando seus tratamentos e adaptações para inserção e utilização no projeto (remoção de fundo, redimensionamento, mudança de cor, conversão de formato).
 
