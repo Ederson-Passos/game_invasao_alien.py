@@ -12,14 +12,14 @@ class Nave(Sprite):
         self.configuracoes = configuracoes  # Recebendo acesso às configurações de velocidade
 
         # Carrega a imagem da espaçonave e obtém seu rect
-        self.imagem = pygame.image.load('imagens/nave_sem_fundo.png')
+        self.image = pygame.image.load('imagens/nave_sem_fundo.png')
 
         # Recuperando a escala da imagem:
-        comp, larg = self.imagem.get_size()
+        comp, larg = self.image.get_size()
         # Redimensionando a imagem:
-        self.imagem = pygame.transform.smoothscale(self.imagem, (int(comp * 0.1), int(larg * 0.1)))
+        self.image = pygame.transform.smoothscale(self.image, (int(comp * 0.1), int(larg * 0.1)))
 
-        self.rect = self.imagem.get_rect()  # Trata a imagem como retângulos, 'rect', daí podermos manipular
+        self.rect = self.image.get_rect()  # Trata a imagem como retângulos, 'rect', daí podermos manipular
         # suas coordenadas
         # Armazenando a tela em um retângulo:
         self.tela_retangulo = tela.get_rect()
@@ -48,7 +48,7 @@ class Nave(Sprite):
 
     def posicionar_nave(self):
         """Desenha a espaçonave em sua posição atual."""
-        self.tela.blit(self.imagem, self.rect)
+        self.tela.blit(self.image, self.rect)
 
     def centralizar_nave(self):
         """Centraliza a espaçonave na tela."""

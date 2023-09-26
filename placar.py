@@ -26,7 +26,7 @@ class Placar:
     def prepara_score(self):
         """Transforma a pontuação em uma imagem renderizada."""
         score_arredondado = round(self.estatisticas.pontuacao, -1)
-        score_str = "Pontos  {:,}".format(score_arredondado)
+        score_str = "Pontos  {: }".format(score_arredondado)
         self.score_image = self.fonte.render(score_str, True, self.cor_texto, self.configuracoes.cor_tela)
 
         # Exibe a pontuação na parte superior direita da tela
@@ -45,7 +45,7 @@ class Placar:
     def prepara_pontuacao_maxima(self):
         """Transforma a pontuação máxima em uma imagem renderizada."""
         pontuacao_maxima = round(self.estatisticas.pontuacao_maxima, -1)
-        pontuacao_maxima_str = "Recorde   {:,}".format(pontuacao_maxima)
+        pontuacao_maxima_str = "Recorde   {: }".format(pontuacao_maxima)
         self.pontuacao_maxima_imagem = self.fonte.render(
             pontuacao_maxima_str, True, self.cor_texto, self.configuracoes.cor_tela)
 
