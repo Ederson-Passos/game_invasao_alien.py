@@ -14,7 +14,7 @@ def iniciar_jogo():
     configuracoes = Configuracoes()
     tela = pygame.display.set_mode((configuracoes.tela_comprimento, configuracoes.tela_altura))
     pygame.display.set_caption("Invasão Alien")
-    bg_image = pygame.image.load('imagens/background.jpg').convert_alpha()  # Salvando uma imagem para o fundo
+    bg_image = pygame.image.load('imagens/background1.jpg').convert_alpha()  # Salvando uma imagem para o fundo
     botao_play = Botao(configuracoes, tela, "Play")
     estatisticas = EstatisticasJogo(configuracoes)
     placar = Placar(configuracoes, tela, estatisticas)

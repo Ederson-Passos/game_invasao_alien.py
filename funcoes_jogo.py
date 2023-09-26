@@ -116,7 +116,7 @@ def atualizar_tela(configuracoes, tela, estatisticas, placar, nave, alienigenas,
 def dimensionando_fundo(bg_image):
     """Redimensiona a imagem de fundo da tela."""
     comp, larg = bg_image.get_size()
-    bg_image = pygame.transform.smoothscale(bg_image, (int(comp * 2.8), int(larg * 2.8)))
+    bg_image = pygame.transform.smoothscale(bg_image, (int(comp * 2), int(larg * 2)))
     return bg_image
 
 
