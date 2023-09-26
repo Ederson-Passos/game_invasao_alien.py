@@ -39,6 +39,8 @@ class Placar:
         self.tela.blit(self.score_image, self.pontuacao_rect)
         self.tela.blit(self.pontuacao_maxima_imagem, self.pontuacao_maxima_rect)
         self.tela.blit(self.nivel_imagem, self.nivel_rect)
+        # Desenhando as naves
+        self.naves.draw(self.tela)
 
     def prepara_pontuacao_maxima(self):
         """Transforma a pontuação máxima em uma imagem renderizada."""
