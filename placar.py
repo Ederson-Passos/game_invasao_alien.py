@@ -14,7 +14,7 @@ class Placar:
         self.estatisticas = estatisticas
 
         # Configurações de fonte para as informações de pontuação
-        self.cor_texto = (0, 255, 0)
+        self.cor_texto = (255, 255, 255)
         self.fonte = pygame.font.Font("ARCADECLASSIC.TTF", 24)
 
         # Prepara a imagem de pontuações iniciais
@@ -27,7 +27,7 @@ class Placar:
         """Transforma a pontuação em uma imagem renderizada."""
         score_arredondado = round(self.estatisticas.pontuacao, -1)
         score_str = "Pontos  {: }".format(score_arredondado)
-        self.score_image = self.fonte.render(score_str, True, self.cor_texto, self.configuracoes.cor_tela)
+        self.score_image = self.fonte.render(score_str, True, self.cor_texto, (255, 0, 0))
 
         # Exibe a pontuação na parte superior direita da tela
         self.pontuacao_rect = self.score_image.get_rect()
@@ -47,7 +47,7 @@ class Placar:
         pontuacao_maxima = round(self.estatisticas.pontuacao_maxima, -1)
         pontuacao_maxima_str = "Recorde   {: }".format(pontuacao_maxima)
         self.pontuacao_maxima_imagem = self.fonte.render(
-            pontuacao_maxima_str, True, self.cor_texto, self.configuracoes.cor_tela)
+            pontuacao_maxima_str, True, self.cor_texto, (255, 0, 0))
 
         # Centraliza a pontuação máxima na parte superior da tela.
         self.pontuacao_maxima_rect = self.pontuacao_maxima_imagem.get_rect()
@@ -57,7 +57,7 @@ class Placar:
     def prepara_nivel(self):
         """Transforma o nivel em uma imagem renderizada."""
         self.nivel_imagem = self.fonte.render(
-            str("Nivel {} ".format(self.estatisticas.nivel)), True, self.cor_texto, self.configuracoes.cor_tela)
+            str("Nivel {} ".format(self.estatisticas.nivel)), True, self.cor_texto, (255, 0, 0))
 
         # Posiciona o nível abaixo da pontuação.
         self.nivel_rect = self.nivel_imagem.get_rect()
