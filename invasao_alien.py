@@ -28,7 +28,7 @@ def iniciar_jogo():
         if estatisticas.jogo_ativo:
             nave.atualizar()
             funcoes.atualizar_projeteis(configuracoes, tela, estatisticas, placar, nave, alienigenas, projeteis)
-            funcoes.atualizar_alienigenas(configuracoes, estatisticas, tela, nave, alienigenas, projeteis)
+            funcoes.atualizar_alienigenas(configuracoes, tela, estatisticas, placar, nave, alienigenas, projeteis)
 
         funcoes.atualizar_tela(configuracoes, tela, estatisticas, placar, nave, alienigenas, projeteis, botao_play)
 

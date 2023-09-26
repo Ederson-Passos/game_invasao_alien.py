@@ -75,6 +75,7 @@ def verificar_botao_play(configuracoes, tela, estatisticas, placar, botao_play, 
         placar.prepara_score()
         placar.prepara_pontuacao_maxima()
         placar.prepara_nivel()
+        placar.prepara_naves()
 
         # Esvazia a lista de alienígenas e de projetéis
         alienigenas.empty()
@@ -205,11 +206,14 @@ def verificar_arestas_frota(configuracoes, alienigenas):
             break
 
 
-def nave_atingida(configuracoes, estatisticas, tela, nave, alienigenas, projeteis):
+def nave_atingida(configuracoes, tela, estatisticas, placar, nave, alienigenas, projeteis):
     """Responde ao evento de a nave ser atingida por um alienígena."""
     if estatisticas.naves_usadas > 0:
         # Decrementa naves_usadas
         estatisticas.naves_usadas -= 1
+
+        # Atualiza o painel de pontuações
+        placar.prepara_naves()
 
         # Esvazia a lista de alienígenas e de projéteis
         alienigenas.empty()
@@ -227,17 +231,17 @@ def nave_atingida(configuracoes, estatisticas, tela, nave, alienigenas, projetei
         pygame.mouse.set_visible(True)
 
 
-def verificar_aresta_inferior_alienigenas(configuracoes, estatisticas, tela, nave, alienigenas, projeteis):
+def verificar_aresta_inferior_alienigenas(configuracoes, tela, estatisticas, placar, nave, alienigenas, projeteis):
     """Verifica se algum alienígena alcançou a parte inferior da tela."""
     tela_rect = tela.get_rect()
     for alienigena in alienigenas.sprites():
         if alienigena.rect.bottom >= tela_rect.bottom:
             # Trata esse caso do mesmo modo que é feito quando a espaçonave é atingida
-            nave_atingida(configuracoes, estatisticas, tela, nave, alienigenas, projeteis)
+            nave_atingida(configuracoes, tela, estatisticas, placar, nave, alienigenas, projeteis)
             break
 
 
-def atualizar_alienigenas(configuracoes, estatisticas, tela, nave, alienigenas, projeteis):
+def atualizar_alienigenas(configuracoes, tela, estatisticas, placar, nave, alienigenas, projeteis):
     """
     Verifica se a frota está em uma das bordas
     e então atualiza as posições de todos os alienígenas da frota.
@@ -248,9 +252,9 @@ def atualizar_alienigenas(configuracoes, estatisticas, tela, nave, alienigenas, 
     # Verifica se houve colisões entre alienígenas (group) e a espaçonave (sprite), devolvendo o primeiro
     # membro do group que colidiu
     if pygame.sprite.spritecollideany(nave, alienigenas):
-        nave_atingida(configuracoes, estatisticas, tela, nave, alienigenas, projeteis)
+        nave_atingida(configuracoes, tela, estatisticas, placar, nave, alienigenas, projeteis)
 
-    verificar_aresta_inferior_alienigenas(configuracoes, estatisticas, tela, nave, alienigenas, projeteis)
+    verificar_aresta_inferior_alienigenas(configuracoes, tela, estatisticas, placar, nave, alienigenas, projeteis)
 
 
 def verificar_pontuacao_maxima(estatisticas, placar):
