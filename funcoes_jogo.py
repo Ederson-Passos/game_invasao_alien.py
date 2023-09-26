@@ -86,10 +86,14 @@ def verificar_botao_play(configuracoes, tela, estatisticas, placar, botao_play, 
         nave.centralizar_nave()
 
 
-def atualizar_tela(configuracoes, tela, estatisticas, placar, nave, alienigenas, projeteis, botao_play):
+def atualizar_tela(configuracoes, tela, estatisticas, placar, nave, alienigenas, projeteis, botao_play, bg_image):
     """Atualiza as imagens na tela e alterna para a nova tela a cada passagem pelo laço principal."""
     # Redesenha a tela a cada passagem pelo laço
     tela.fill(configuracoes.cor_tela)
+
+    # Desenha a imagem de fundo da tela
+    tela.blit(dimensionando_fundo(bg_image), (0, 0))
+
     # Redesenha todos os projéteis atrás da espaçonave e dos alienígenas.
     for projetil in projeteis.sprites():
         projetil.desenhar_projetil()
@@ -107,6 +111,13 @@ def atualizar_tela(configuracoes, tela, estatisticas, placar, nave, alienigenas,
 
     # Deixa a tela mais recente visível
     pygame.display.flip()
+
+
+def dimensionando_fundo(bg_image):
+    """Redimensiona a imagem de fundo da tela."""
+    comp, larg = bg_image.get_size()
+    bg_image = pygame.transform.smoothscale(bg_image, (int(comp * 2.8), int(larg * 2.8)))
+    return bg_image
 
 
 def atualizar_projeteis(configuracoes, tela, estatisticas, placar, nave, alienigenas, projeteis):

@@ -1,3 +1,6 @@
+import pygame
+
+
 class Configuracoes:
     """Uma classe para armazenar todas as configurações da Invasão Alienígena."""
 
@@ -18,7 +21,7 @@ class Configuracoes:
         self.projeteis_permitidos = 5
 
         # Configurações dos alienígenas:
-        self.velocidade_queda_frota = 2
+        self.velocidade_queda_frota = 3
 
         # A taxa com que a velocidade do jogo aumenta
         self.escala_aumento_velocidade = 1.25
@@ -30,9 +33,9 @@ class Configuracoes:
 
     def inicializa_configuracoes_dinamicas(self):
         """Inicializa as configurações que mudam no decorrer do jogo."""
-        self.fator_velocidade_nave = 1.5
-        self.fator_velocidade_projetil = 2
-        self.fator_velocidade_alienigena = 1
+        self.fator_velocidade_nave = 2
+        self.fator_velocidade_projetil = 3.5
+        self.fator_velocidade_alienigena = 2
 
         # direcao_frota igual a 1 representa direita; -1 representa esquerda.
         self.direcao_frota = 1

@@ -15,11 +15,6 @@ def iniciar_jogo():
     tela = pygame.display.set_mode((configuracoes.tela_comprimento, configuracoes.tela_altura))
     pygame.display.set_caption("Invasão Alien")
     bg_image = pygame.image.load('imagens/background.jpg').convert_alpha()  # Salvando uma imagem para o fundo
-
-    def desenha_background():
-        """Desenha a imagem de fundo do jogo, retratando o Universo."""
-        tela.blit(bg_image, (0, 0))
-
     botao_play = Botao(configuracoes, tela, "Play")
     estatisticas = EstatisticasJogo(configuracoes)
     placar = Placar(configuracoes, tela, estatisticas)
@@ -29,7 +24,6 @@ def iniciar_jogo():
     funcoes.criar_frota(configuracoes, tela, nave, alienigenas)
 
     while True:
-        desenha_background()
         funcoes.checar_eventos(configuracoes, tela, estatisticas, placar, botao_play, nave, alienigenas, projeteis)
         
         if estatisticas.jogo_ativo:
@@ -37,9 +31,9 @@ def iniciar_jogo():
             funcoes.atualizar_projeteis(configuracoes, tela, estatisticas, placar, nave, alienigenas, projeteis)
             funcoes.atualizar_alienigenas(configuracoes, tela, estatisticas, placar, nave, alienigenas, projeteis)
 
-        funcoes.atualizar_tela(configuracoes, tela, estatisticas, placar, nave, alienigenas, projeteis, botao_play)
+        funcoes.atualizar_tela(configuracoes, tela, estatisticas, placar, nave,
+                               alienigenas, projeteis, botao_play, bg_image)
 
-        pygame.display.update()
 
 
 iniciar_jogo()
