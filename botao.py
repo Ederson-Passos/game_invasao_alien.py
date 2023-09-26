@@ -12,7 +12,7 @@ class Botao:
         self.width, self.height = 200, 50
         self.cor_botao = (255, 0, 0)
         self.cor_texto = (255, 255, 255)
-        self.fonte = pygame.font.SysFont(None, 48)
+        self.fonte = pygame.font.Font('ARCADECLASSIC.TTF', 48)
 
         # Constrói o objeto rect do botão e o centraliza
         self.rect = pygame.Rect(0, 0, self.width, self.height)
