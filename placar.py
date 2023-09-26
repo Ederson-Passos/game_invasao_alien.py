@@ -64,4 +64,10 @@ class Placar:
 
     def prepara_naves(self):
         """Mostra quantas espaçonaves restam."""
-        pass
+        self.naves = Group()
+        for nave_num in range(self.estatisticas.naves_usadas):
+            nave = Nave(self.configuracoes, self.tela)
+            # Definindo o valor da coordenada x da nave para que seja com uma margem de 10 pixels à esquerda
+            nave.rect.x = 10 + nave_num * nave.rect.width
+            nave.rect.y = 10
+            self.naves.add(nave)
