@@ -21,6 +21,7 @@ def iniciar_jogo():
     nave = Nave(configuracoes, tela)
     projeteis = Group()
     alienigenas = Group()
+    projeteis_alienigenas = Group()
     funcoes.criar_frota(configuracoes, tela, nave, alienigenas)
 
     while True:
