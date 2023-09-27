@@ -15,7 +15,7 @@ class Placar:
 
         # Configurações de fonte para as informações de pontuação
         self.cor_texto = (255, 255, 255)
-        self.fonte = pygame.font.Font('ARCADECLASSIC.TTF',24)
+        self.fonte = pygame.font.Font('ARCADECLASSIC.TTF', 24)
 
         # Prepara a imagem de pontuações iniciais
         self.prepara_score()

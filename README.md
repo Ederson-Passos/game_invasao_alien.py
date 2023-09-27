@@ -21,7 +21,6 @@ ___
 # O jogo
 Consiste em um jogo de tiros em 2D (duas dimensões, estilo arcade), composto por uma nave que deve eliminar outras naves alienígenas, isto com um grau crescente de dificuldade conforme o jogador progredir de fase. A biblioteca Pygame foi utilizada para criar os gráficos e administrar as interações do usuário, via teclado e mouse, com os elementos visuais.
 
-(incluir um gif do jogo pronto)
 ___
 # Etapas do projeto
 1. `Aprendizado dos fundamentos da linguagem Python:` diferentes tipos de dados; armazenamento através de variáveis, listas, dicionários e tuplas; utilização de laços de repetição e os condicionais if, elif e else; tratamento de inputs do usuário; criação de funções para reutilização e organização do código (funções locais e funções lambda); documentação e depuração (refatoração) do código; tratatamento de erros; criação de testes simples; consulta e utilização da documentação da linguagem.
@@ -31,11 +30,7 @@ ___
 
 2. `Configuração inicial:` preparação do ambiente de desenvolvimento com Python e Pygame, configuração da janela do jogo e loop principal, criação dos módulos principais: "Configurações" e "Funções do jogo", com a criação de suas respectivas funções locais `__init__(self)`.
 
-(incluir um gif da classe principal)
-
 3. `Programação orientada a objetos:` criação de classes para representar a nave, a frota de alienígenas, os projéteis, o placar de pontuação, níveis, recordes, botão "play", entre outros. Utilização dos princípios de herança e polimorfismo para organizar e otimizar o código, tratando adequadamente diferentes elementos do jogo.
-
-(incluir um gif das classes)
 
 4. `Lógica do jogo:` desenvolvimento de funções para gerenciamento do movimento dos personagens, - tanto da nave quanto da frota de alienígenas -, implementação de funções para detecção de colisões, contagem de pontos, recordes e níveis, com consequente aumento no grau de dificuldade.
 
