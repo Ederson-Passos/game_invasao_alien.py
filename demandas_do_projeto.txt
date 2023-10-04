@@ -1,6 +1,0 @@
-1. No arquivo projeto.py:
-* desmembrar a classe Projetil() por herança (verificar como fazer polimorfismo) em Projetil_Nave() e Projetil_Alienigena();
-2. No arquivo funcoes_jogo.py:
-* concluir a função disparar_projetil_alienigena
-3. No arquivo principal:
-* verificar a utilização correta da instância "projeteis_alienigenas"
