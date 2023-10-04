@@ -28,6 +28,14 @@ def disparar_projetil(configuracoes, tela, nave, projeteis):
         projeteis.add(novo_projetil)
 
 
+def disparar_projetil_alienigena(configuracoes, tela, alienigenas, projeteis_alienigenas):
+    """Permite que um alienígena aleaório dispare um projétil."""
+    # Cria um novo projétil e o adiciona ao grupo de projéteis dos alienígenas
+    if len(projeteis_alienigenas) < configuracoes.projeteis_alien_permitidos:
+        pass
+        # novo_projetil_alien =
+
+
 def checar_eventos_keyup(evento, nave):
     """Responde a solturas de tecla."""
     if evento.key == pygame.K_RIGHT:
@@ -92,7 +100,10 @@ def atualizar_tela(configuracoes, tela, estatisticas, placar, nave, alienigenas,
     tela.fill(configuracoes.cor_tela)
 
     # Desenha a imagem de fundo da tela
-    tela.blit(dimensionando_fundo(bg_image), (0, 0))
+    dimensionando_fundo(bg_image, configuracoes, tela)
+
+    # Desenha a informação sobre pontuação
+    placar.apresenta_score()
 
     # Redesenha todos os projéteis atrás da espaçonave e dos alienígenas.
     for projetil in projeteis.sprites():
@@ -102,9 +113,6 @@ def atualizar_tela(configuracoes, tela, estatisticas, placar, nave, alienigenas,
     # Definida pelo seu atributo rect.
     alienigenas.draw(tela)
 
-    # Desenha a informação sobre pontuação
-    placar.apresenta_score()
-
     # Desenha o botão Play se o jogo estiver inativo
     if not estatisticas.jogo_ativo:
         botao_play.desenhar_botao()
@@ -113,11 +121,10 @@ def atualizar_tela(configuracoes, tela, estatisticas, placar, nave, alienigenas,
     pygame.display.flip()
 
 
-def dimensionando_fundo(bg_image):
+def dimensionando_fundo(bg_image, configuracoes, tela):
     """Redimensiona a imagem de fundo da tela."""
-    comp, larg = bg_image.get_size()
-    bg_image = pygame.transform.smoothscale(bg_image, (int(comp * 1.9), int(larg * 1.6)))
-    return bg_image
+    bg_escalado = pygame.transform.scale(bg_image, (configuracoes.tela_comprimento, configuracoes.tela_altura))
+    tela.blit(bg_escalado, (0, 0))
 
 
 def atualizar_projeteis(configuracoes, tela, estatisticas, placar, nave, alienigenas, projeteis):
@@ -177,7 +184,7 @@ def obter_num_linhas(configuracoes, nave_altura, alienigena_altura):
 
 
 def criar_alienigena(configuracoes, tela, alienigenas, numero_alienigena, numero_linhas):
-    # Cria um alienígena e o posiciona na linha
+    """Cria um alienígena e o posiciona na linha"""
     alienigena = Alienigena(configuracoes, tela)
     alienigena_largura = alienigena.rect.width
     # Definindo a posição horizontal em função da margem,do espaço de duas naves vezes

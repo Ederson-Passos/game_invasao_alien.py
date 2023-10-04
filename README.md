@@ -9,7 +9,7 @@
 * [O jogo](#o-jogo)
 * [Etapas do projeto](#etapas-do-projeto)
 * [Conclusão](#conclusão)
-* [Referências bibliográficas](#referências-bibliográficas)
+* [Referências](#referências-bibliográficas)
 
 ___
 # Introdução
@@ -46,7 +46,8 @@ Este projeto foi uma grande oportunidade de aplicar os conceitos de programaçã
 2. O projeto permanecerá em desenvolvimento, dado caberem várias melhorias, como frotas e projéteis diferentes, uma nave "alfa" para ser derrotada, adicionar efeitos sonoros.
 3. Programar é uma forma de arte, como pintar um quadro, compor uma música, demonstrar um teorema ou confeccionar um móvel de madeira com as próprias mãos; logo, é algo desafiador, mas extremamente gratificante.
 ___
-# Referências Bibliográficas
+# Referências
 * *Curso intensivo de Python, uma introdução prática e baseada em projetos à programação*, Eric Matthes, 2016, Novatec Editora;
 * *Python Fluente*, Luciano Ramalho, 2015, Novatec Editora;
-* *Pense em Python*, Allen B. Downey, 2016, Novatec Editora.
+* *Pense em Python*, Allen B. Downey, 2016, Novatec Editora;
+* [*Street Fighter Style Fighting Game in Python using Pygame - Complete Tutorial*, Coding With Russ, YouTube](https://www.youtube.com/watch?v=s5bd9KMSSW4&t=497s).

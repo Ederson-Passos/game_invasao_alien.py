@@ -23,6 +23,12 @@ class Configuracoes:
         # Configurações dos alienígenas:
         self.velocidade_queda_frota = 3
 
+        # Configurações dos projéteis dos alienígenas:
+        self.projetil_alien_largura = 3
+        self.projetil_alien_altura = 15
+        self.projetil_alien_cor = (0, 255, 0)
+        self.projeteis_alien_permitidos = self.projeteis_permitidos
+
         # A taxa com que a velocidade do jogo aumenta
         self.escala_aumento_velocidade = 1.25
 
