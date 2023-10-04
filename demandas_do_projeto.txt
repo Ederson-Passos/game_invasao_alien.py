@@ -5,4 +5,4 @@
 3. No arquivo principal:
 * verificar a utilização correta da instância "projeteis_alienigenas"
 
-Encerrando os testes de modificações.
+Está tudo funcionando corretamente.
