@@ -4,3 +4,5 @@
 * concluir a função disparar_projetil_alienigena
 3. No arquivo principal:
 * verificar a utilização correta da instância "projeteis_alienigenas"
+
+Será que deu certo?
