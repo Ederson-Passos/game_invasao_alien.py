@@ -5,5 +5,4 @@
 3. No arquivo principal:
 * verificar a utilização correta da instância "projeteis_alienigenas"
 
-Será que deu certo?
-Ainda tentando muito...
+A princípio está tudo funcionando.
