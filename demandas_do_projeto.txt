@@ -5,4 +5,4 @@
 3. No arquivo principal:
 * verificar a utilização correta da instância "projeteis_alienigenas"
 
-Está tudo funcionando corretamente.
+Está tudo funcionando corretamente, glória.
